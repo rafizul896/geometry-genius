@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-[90%] md:w-[85%] mx-auto my-5">
+    <header>
+        <!-- Navber -->
+        <nav class="flex justify-between bg-[#e7f4fb] py-3 px-5 rounded-2xl">
+            <div class="nav-logo">
+                <h2 class="text-2xl font-bold">Interactive</h2>
+                <p class="text-sm">Geometry Genius</p>
+            </div>
+            <div>
+                <button class="py-3 px-7 rounded-xl bg-[#1090d8] text-white font-medium">Blog</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- all card -->
+        <div class="flex flex-col lg:flex-row mt-12">
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- card-1 -->
+                <div class="card  bg-base-100 border p-8">
+                    <img src="./images/triangle.png" alt="Shoes" />
+                    <div class="card-body flex items-center gap-3">
+                      <h2 class="card-title">Triangle</h2>
+                      <p>Area (A) = .5 X b X h</p>
+                      <div class="flex items-center gap-3">
+                        <input id="triangleBase" class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="b">
+                        <span>cm</span>
+                        <input id="triangleHeight" class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="h">
+                        <span>cm</span>
+                      </div>
+                      <div>
+                        <p>Area: <span id="triangleArea"></span><span> cm<sup>2</sup></span></p>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button onclick="triangleBtn()" class="btn text-white bg-[#1090D8] w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card-2 -->
+                <div class="card  bg-base-100 border p-8">
+                    <img src="./images/rectangle.png" alt="Shoes" />
+                    <div class="card-body flex items-center gap-3">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p>Area (A) = w X l</p>
+                      <div class="flex items-center gap-3">
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="b">
+                        <span>cm</span>
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="h">
+                        <span>cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn text-white bg-[#1090D8] w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card-3 -->
+                <div class="card  bg-base-100 border p-8">
+                    <img src="./images/parallelogram.png" alt="Shoes" />
+                    <div class="card-body flex items-center gap-3">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p>Area (A) = b X h</p>
+                      <div class="flex items-center gap-3">
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="b">
+                        <span>cm</span>
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="h">
+                        <span>cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn text-white bg-[#1090D8] w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card-4 -->
+                <div class="card  bg-base-100 border p-8">
+                    <img src="./images/rhombus.png" alt="Shoes" />
+                    <div class="card-body flex items-center gap-3">
+                      <h2 class="card-title">Triangle</h2>
+                      <p>Area (A) = .5 X d₁ X d₂</p>
+                      <div class="flex items-center gap-3">
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="b">
+                        <span>cm</span>
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="h">
+                        <span>cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn text-white bg-[#1090D8] w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card-5 -->
+                <div class="card  bg-base-100 border p-8">
+                    <img src="./images/pentagon.png" alt="Shoes" />
+                    <div class="card-body flex items-center gap-3">
+                      <h2 class="card-title">Pentagon</h2>
+                      <p>Area (A) = .5 X p X b</p>
+                      <div class="flex items-center gap-3">
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="b">
+                        <span>cm</span>
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="h">
+                        <span>cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn text-white bg-[#1090D8] w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card-6 -->
+                <div class="card  bg-base-100 border p-8">
+                    <img src="./images/ellipse.png" alt="Shoes" />
+                    <div class="card-body flex items-center gap-3">
+                      <h2 class="card-title">Ellipse</h2>
+                      <p>Area (A) = 3.1315 X a X b</p>
+                      <div class="flex items-center gap-3">
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="b">
+                        <span>cm</span>
+                        <input class="w-24 px-2 rounded-sm border-black border" type="number" placeholder="h">
+                        <span>cm</span>
+                      </div>
+                      <div class="card-actions w-full">
+                        <button class="btn text-white bg-[#1090D8] w-full">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div>
+                <div class="w-[250px]">
+                    <h1 class="text-xl font-medium underline text-center">Area Calculation</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./script/index.js"></script>
+</body>
+</html>
